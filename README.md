@@ -16,3 +16,21 @@ This data science project walks through step by step process of how to build a r
 * Python flask for http server
 * HTML/CSS/Javascript for UI
 * Deploy the app to Amazon cloud (EC2)
+
+# Installation steps
+Git clone the repo
+```
+git clone https://github.com/Anirbanbhk88/Real-Estate-House-price-Prediction.git
+```
+
+Create a python Virtual environment and install dependencies from requirements.txt
+```
+pip install -r requirements.txt
+```
+
+Set the Flask environment variable and Run the Flask server
+```
+cd BHP/server
+export FLASK_APP=server.py
+flask run
+```
