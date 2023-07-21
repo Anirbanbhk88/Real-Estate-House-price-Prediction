@@ -2,7 +2,11 @@ from flask import Flask, jsonify, request
 import util
 app = Flask(__name__) #create a flask app
 
-
+@app.route('/') #http://
+def home():
+    util.load_saved_artefacts()
+    return 'Start a Flask server for Home Price Prediction'
+    
 @app.route('/hello')
 def hello():
     return 'Hi'
@@ -33,4 +37,4 @@ def predict_home_price():
 if __name__ == "__main__":
     print('Start a Flask server for Home Price Prediction...')
     util.load_saved_artefacts()
-    app.run()
+    app.run(debug=True, port=5000, host='0.0.0.0')
